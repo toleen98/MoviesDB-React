@@ -1,0 +1,33 @@
+.Nav {
+    display: grid ;
+    position: relative;
+    grid-template-rows: auto ;
+    grid-template-columns: 70% 30%;
+
+
+}
+
+.nav-item {
+    color: #c5c5c5;
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    grid-row: 1;
+}
+
+.nav-item span {
+    color:#FFD600;
+}
+
+.left {
+  grid-area: left;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.right {
+  /* position: absolute; */
+  grid-area: right;
+  grid-row: 1;
+  grid-column: 2;
+}
