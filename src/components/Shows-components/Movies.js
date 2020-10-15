@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-import './Slider.css'
+import React, { Component } from 'react';
+import ShowCard from './ShowCard';
+import './Shows.css'
 
 const data = {
     "properties": [
@@ -95,72 +95,19 @@ const data = {
         "bathrooms": 2,
         "carSpaces": 2
     }]}
+class Movies extends Component {
 
-class Slider extends Component {
-  
-        state = {
-          shows:data.properties,
-          show:data.properties[0]
-        }
-  
-
-    nextShow = () => {
-      if(this.state.show.index !== data.properties.length-1){
-        const newIndex = this.state.show.index + 1;
-        this.setState({
-          show:  data.properties[newIndex]
-        })
-      }
-    }
-    
-    prevShow = () => {
-      if (this.state.show.index !== 0){
-        const newIndex = this.state.show.index - 1;
-        this.setState({
-          show:  data.properties[newIndex]
-        })
-      }
-    }
-
-    render(){
-        const {shows, show} = this.state;
-        return (
-          <div >
-    
-           
-              <h2>
-                Recntly Viewd Shows 
-              </h2>
-            
-            <div className="page" style={{display:'grid'}}>
-           
-             <LeftOutlined 
-              onClick={() => this.prevShow()} 
-              className="col1 icon"
-             />
-    
-                <div className="col2">
-                  <div className={`cards-slider active-slide-${show.index}`}>
-                    <div className="cards-slider-wrapper" style={{
-                      'transform': `translateX(-${show.index*(100/shows.length)}%)`
-                    }}>
-                      {
-                        shows.map(show => <img src={show.picture} alt='img'  height={'200px'}/>)
-                      }
-                    </div>
-                  </div>
-                </div>
+    render() {
+        return(
+            <div className='flex-container'>
+            { data.properties.map( prop => {
+                return (<ShowCard show={prop}/>)
+            })
                 
-                <RightOutlined 
-                className="col3 icon"
-                onClick={() => this.nextShow()} 
-                />
-                
-                
+                }
             </div>
-          </div>
-        );
-      }
+        )
+    }
 }
 
-export default Slider;
+export default Movies
