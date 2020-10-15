@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './layouts/Navbar';
+import Slider from './components/Slider/Slider'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
        <Router>
         <Navbar/>
+        <Slider/>
        </Router>
       
     </div>
