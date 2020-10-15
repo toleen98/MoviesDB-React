@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './layouts/Navbar';
 import Slider from './components/Slider/Slider'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Tabs from './components/Tabs/Tabs'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
        <Router>
         <Navbar/>
         <Slider/>
+        <Tabs/>
        </Router>
       
     </div>
