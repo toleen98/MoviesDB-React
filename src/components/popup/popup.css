@@ -1,0 +1,47 @@
+.popup {
+    width: auto;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 2px solid #ffd600;
+   
+}
+
+
+.contant  {
+  position: absolute;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; 
+  width: 100%;
+  height: 100%;
+  padding: 20px 50px;
+  
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 20px 0;
+}
+
+.genre p span{
+    background-color: #717271;
+    border: 2px solid  #717271 ;
+    width: auto;
+    padding: 5px;
+    border-radius: 25%;
+    margin-right: 5px;
+}
+
+.lang p {
+    color: #ffd600;
+}
+
+.btn {
+    border-radius: 25px;
+    background-color: #ffd600;
+    border: 2px solid #ffd600;
+    padding: 10px 30px;
+    margin: 20px 0 40px 0;
+}
