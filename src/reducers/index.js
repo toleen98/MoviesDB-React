@@ -1,8 +1,7 @@
 import { combineReducers } from "redux";
-import authReducer from "./searchReducers";
-import showSidebarReducer from "./showSidebarReducer"
+import shows from "./searchReducers";
+
 
 export default combineReducers({
-  auth: authReducer,
-  showSidebar: showSidebarReducer
+  shows: shows
 });
