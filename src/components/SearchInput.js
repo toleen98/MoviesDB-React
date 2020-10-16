@@ -14,6 +14,7 @@ class SearchInput extends Component {
         showName: ''
     }
 
+    
     handleChange= (e) => {
         this.setState({showName: e.target.value});
     }

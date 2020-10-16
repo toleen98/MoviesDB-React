@@ -2,8 +2,7 @@ import axios from "axios";
 
 import {
   GET_MOVIES,
-  GET_SERIES,
-  HISTORY
+  GET_SERIES
 } from "./types";
 
 
