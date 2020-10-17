@@ -72,7 +72,7 @@ class Slider extends Component {
                 
                 <RightOutlined 
                 className="col3 icon"
-                onClick={() => this.nextShow(index,shows)} 
+                onClick={() => this.nextShow()} 
                 />
                 
                 

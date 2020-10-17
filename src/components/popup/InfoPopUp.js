@@ -34,7 +34,7 @@ const InfoPopUp = ({movie}) =>{
                 <div className='genre'>
                     <h2>Genre</h2>
                     <p>{
-                        movie.Genre.split(',').map(gen => <span>{gen}</span>)
+                        movie.Genre && movie.Genre.split(',').map(gen => <span>{gen}</span>)
                     }</p>
                 </div>
                 <div>
@@ -49,7 +49,7 @@ const InfoPopUp = ({movie}) =>{
                     <h2>Language</h2>
                     <p>
                     {
-                        movie.Language.split(',').map(lang => <span>{lang}</span>)
+                        movie.Language && movie.Language.split(',').map(lang => <span>{lang}</span>)
                     }</p>
                 </div>
             </div>
