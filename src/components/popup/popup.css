@@ -3,6 +3,8 @@
     height: 350px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-position: center;
+
     border: 2px solid #ffd600;
     flex-grow: 8;
     margin-bottom: 40px;

@@ -44,7 +44,7 @@ class Slider extends Component {
        
         return (
           
-          <div >
+          <div className='slide' >
     
            
               <h2>

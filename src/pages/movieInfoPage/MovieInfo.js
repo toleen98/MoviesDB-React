@@ -23,24 +23,24 @@ class MoreInfo extends Component {
         return(
             <div>
                 <div className='info-row'>
-                <div className='col1'><img src={this.props.location.state.Poster} alt={this.props.location.state.Title}/></div>
-                <div className='col2'>
-                    <div>{this.props.location.state.Title} ({this.props.location.state.Released})</div>
+                <div className='col1-info'><img src={this.props.location.state.Poster} alt={this.props.location.state.Title}/></div>
+                <div className='col2-info'>
+                    <div>{this.props.location.state.Title} <span>({this.props.location.state.Released})</span></div>
                     <div><span>Languge:</span> {this.props.location.state.Language}</div>
                     <div><span>Mpaa rating:</span> {this.state.info.mpaa_rating}</div>
                     <div><span>Genre:</span>Genre: {this.props.location.state.Genre}</div>
-                    <div>Rate: {this.props.location.state.imdbRating} . {this.props.location.state.imdbVotes} vote </div>
-                    <div>Runtime: {this.props.location.state.Runtime}</div>
-                    <div>Director: {this.props.location.state.Director}</div>
-                    <div>Actors: {this.props.location.state.Actors}</div>
+                    <div><span>Rate:</span> {this.props.location.state.imdbRating} . {this.props.location.state.imdbVotes} vote </div>
+                    <div><span>Runtime:</span> {this.props.location.state.Runtime}</div>
+                    <div><span>Director:</span> {this.props.location.state.Director}</div>
+                    <div><span>Actors:</span> {this.props.location.state.Actors}</div>
 
                 </div>
                 </div>
                 
-                <div>
-                    <h2>Summry</h2>
+                <div className='summary'>
+                    <h2>Summary</h2>
                     <p>{this.state.info.summary_short}</p>
-                    {/* <p>{this.state.info.link.suggested_link_text} <span>{this.state.info.link.url}</span></p> */}
+                    <p>{this.state.info.link && <a href={this.state.info.link.url}>{this.state.info.link.suggested_link_text}</a> }</p>
                 </div>
 
             </div>

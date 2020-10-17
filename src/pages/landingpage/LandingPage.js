@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Suspense, lazy} from 'react';
 import Slider from '../../components/Slider/Slider';
 import Tabs from '../../components/Tabs/Tabs';
 import PropTypes from "prop-types";

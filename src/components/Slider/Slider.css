@@ -1,10 +1,14 @@
-.page {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 10% 80% 10%;
-   
+.slide {
+  margin: 60px 0;
 }
-  
+
+.page {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 10% 80% 10%;
+  margin: 60px 0;
+}
+
 .page  .icon{
   cursor: pointer;
   border: none;
@@ -65,3 +69,4 @@
     grid-column: 3;
     z-index: 1;          
 }
+
