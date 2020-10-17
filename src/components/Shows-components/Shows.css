@@ -7,7 +7,6 @@
     height: 280px;
     
 
-
 }
 .arrow-up {
     width: 0; 
@@ -33,15 +32,25 @@
     color: #f1f1f1;
     width: 100%;
     text-align: center;
-    top: 80%;
+    top: 70%;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
 
     
 }
 
 .flex-container {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     position: relative;
-    grid-template-columns: auto auto auto auto auto;
 }
+
+@media screen and (max-width: 800px) {
+    .cont img {
+        width:190%;
+    
+    }
+    .flex-container {
+        display: block;
+    }
+    
+  }

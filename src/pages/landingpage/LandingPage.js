@@ -1,10 +1,11 @@
-import React, {Component, Suspense, lazy} from 'react';
+import React, {Component, } from 'react';
 import Slider from '../../components/Slider/Slider';
 import Tabs from '../../components/Tabs/Tabs';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Shows from '../../components/Shows-components/Shows';
 import MoreInfo from '../movieInfoPage/MovieInfo';
+import {Col} from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
@@ -15,7 +16,7 @@ class LandingPage extends Component {
     render() {
         const {movies, series, history} = this.props.shows
         return(
-            <div>
+            <Col xs={12}>
                 <Slider history={history} />
                 <Router>
                     <Tabs/> 
@@ -29,7 +30,7 @@ class LandingPage extends Component {
                 </Router>
                 
               
-            </div>
+            </Col>
         )
     }
 

@@ -61,3 +61,17 @@
     border-bottom: 1px solid #313de4;
     color :#313de4
 }
+
+@media screen and (max-width: 800px) {
+    .info-row {
+        display: block;
+    }
+    .col1-info img {
+        width: 100%;
+    }
+    .col2-info {
+        margin-top: 50px;
+        margin-left: 0px;
+        
+    }
+}

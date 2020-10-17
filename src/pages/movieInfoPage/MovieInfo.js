@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import './movieInfo.css'
+import {Col} from 'react-bootstrap'
+import './movieInfo.css';
 
 
 class MoreInfo extends Component {

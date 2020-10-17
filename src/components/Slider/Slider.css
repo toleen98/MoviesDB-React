@@ -70,3 +70,11 @@
     z-index: 1;          
 }
 
+@media screen and (max-width: 800px) {
+  .page  .icon{
+    font-size: 50px;   
+  }
+  .slide h2 {
+    font-size: 18px;
+  }
+}

@@ -23,3 +23,9 @@ input:focus {
   color: white;
 }
 
+
+@media screen and (max-width: 800px) {
+  body{
+    padding: 30px !important;
+  }
+}

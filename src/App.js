@@ -21,7 +21,7 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
         
           <LandingPage/>
-          <Route path='/moreInfo'  component={MoreInfo}></Route>
+          
         
         </Suspense>
        </Router>
