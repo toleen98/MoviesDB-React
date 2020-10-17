@@ -28,9 +28,11 @@ class ShowCard extends Component {
     }
 
     showInfo = (e) => {
-       const value = !this.state.showInfoPopUp ? true :false;
-        if (value) {
+       
+        if (!this.state.showInfoPopUp) {
             this.props.clikedShow(this.props.show)
+        }else {
+            this.setState({showInfoPopUp:false})
         }   
     }
  
@@ -39,15 +41,19 @@ class ShowCard extends Component {
     
     render() {
         return(
-            <div>
+            <div className='showCard' >
                 
-                <div className='cont' onClick={e => this.showInfo(e)}>
-                    <img src={this.props.show.Poster} alt={this.props.show.Title}/>
+                <div className='cont' onClick={e => this.showInfo(e)} >
+                    <img src={this.props.show.Poster} alt={this.props.show.Title} style={{border:this.state.showInfoPopUp? '3px solid #ffd600': 'none'}}/>
                     <h3>{this.props.show.Title}</h3>
                 </div>
                 
+                
                 {
-                    this.state.showInfoPopUp  && <InfoPopUp movie={this.state.showData} />
+                    this.state.showInfoPopUp  && <div>
+                    <div className='arrow-up'></div>
+                    <InfoPopUp movie={this.state.showData} />
+                    </div>
                 }
                 
             </div>

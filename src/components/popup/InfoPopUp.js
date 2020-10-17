@@ -4,10 +4,6 @@ import './popup.css'
 import { Link } from "react-router-dom";
 
 const InfoPopUp = ({movie}) =>{
-   
-    
-    
-   
         
     return (
         <div className='popup' style={{backgroundImage: `url(${movie.Poster})`}}>
@@ -22,9 +18,8 @@ const InfoPopUp = ({movie}) =>{
                     <div>
                         <Rating 
                         name="half-rating-read" 
-                        defaultValue={movie.imdbRating / 2} 
+                        defaultValue={movie.imdbRating && movie.imdbRating / 2 } 
                         precision={0.5}
-                        getLabelText={()=> '#ffd600'} 
                         color='#ffd600'
                         readOnly 
                         />

@@ -1,11 +1,22 @@
+.showCard {
+    margin:0 0 50px 10px;
+}
 .cont {
     position: relative;
     width:210px;
     height: 280px;
-    margin:0 0 50px 10px;
+    
 
 
 }
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    margin: auto;
+    border-bottom: 20px solid #ffd600;
+  }
   
 .cont img {
     vertical-align: middle;
@@ -31,5 +42,5 @@
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-      
+    position: relative;
 }
