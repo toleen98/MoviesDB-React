@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Shows from '../../components/Shows-components/Shows';
 import MoreInfo from '../movieInfoPage/MovieInfo';
-import {Col} from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
@@ -16,7 +15,7 @@ class LandingPage extends Component {
     render() {
         const {movies, series, history} = this.props.shows
         return(
-            <Col xs={12}>
+            <div>
                 <Slider history={history} />
                 <Router>
                     <Tabs/> 
@@ -30,7 +29,7 @@ class LandingPage extends Component {
                 </Router>
                 
               
-            </Col>
+            </div>
         )
     }
 
