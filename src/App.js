@@ -2,19 +2,25 @@ import React from 'react';
 import { Provider } from "react-redux";
 import store from "./store";
 import Navbar from './layouts/Navbar';
-import LandingPage from './pages/landingpage/LandingPage'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import LandingPage from './pages/landingpage/LandingPage';
+import { BrowserRouter as Router, Route, Switch,useHistory  } from "react-router-dom";
+
 
 
 
 function App() {
+  let history = useHistory();
   return (
    
     <div className="App">
       <Provider store={store}>
-      <Router>
+      <Router  >
         <Navbar/>
-        <LandingPage/>
+        
+        <Switch>
+          <Route path='/' exact component={LandingPage} history={history}></Route>
+          
+        </Switch>
        </Router>
       </Provider>
        

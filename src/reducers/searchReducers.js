@@ -1,13 +1,15 @@
 import {
     GET_SERIES,
     GET_MOVIES,
-    HISTORY
+    CLICKED_SHOW
   } from "../actions/types";
   
   const initialState = {
     
       movies:[],
-      series:[]
+      series:[],
+      clikedShow:'',
+      history:[]
     
   };
   export default function(state = initialState, action) {
@@ -22,6 +24,12 @@ import {
             ...state,
             movies: action.payload,
           };
+          case CLICKED_SHOW:
+            return {
+              ...state,
+              clikedShow: action.payload,
+              history: [...state.history, action.show]
+            };
       default:
         return state;
     }

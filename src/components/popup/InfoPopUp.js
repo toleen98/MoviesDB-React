@@ -1,10 +1,14 @@
 import React from 'react';
 import Rating from '@material-ui/lab/Rating';
 import './popup.css'
+import { Link } from "react-router-dom";
 
-
-
-const InfoPopUp = ({movie}) => {
+const InfoPopUp = ({movie}) =>{
+   
+    
+    
+   
+        
     return (
         <div className='popup' style={{backgroundImage: `url(${movie.Poster})`}}>
             <div className='contant'>
@@ -50,7 +54,10 @@ const InfoPopUp = ({movie}) => {
                 </div>
             </div>
             <div>
-                <button className='btn'>More Info</button>
+                <button className='btn' >
+                <Link 
+                to={{pathname: '/moreinfo',
+                state:movie}} >More Info</Link></button>
             </div>
             </div>
             
@@ -58,4 +65,7 @@ const InfoPopUp = ({movie}) => {
     )
 }
 
-export default InfoPopUp;
+
+
+  export default InfoPopUp;
+

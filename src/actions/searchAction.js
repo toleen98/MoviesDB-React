@@ -1,8 +1,7 @@
-import axios from "axios";
-
 import {
   GET_MOVIES,
-  GET_SERIES
+  GET_SERIES,
+  CLICKED_SHOW
 } from "./types";
 
 
@@ -42,4 +41,10 @@ export const getMovies =  showName => dispatch => {
     
 };
 
-
+export const clikedShow = show => dispatch => {
+  dispatch({
+    type: CLICKED_SHOW,
+    payload: show.imdbID,
+    show:show
+  })
+}

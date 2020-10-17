@@ -3,5 +3,5 @@ import shows from "./searchReducers";
 
 
 export default combineReducers({
-  shows: shows
+  shows: shows,
 });
