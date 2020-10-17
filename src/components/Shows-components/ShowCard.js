@@ -12,7 +12,7 @@ class ShowCard extends Component {
         showData: {}
     }
     componentWillMount() {
-        fetch(`http://www.omdbapi.com/?apikey=3b71935e&i=${this.props.show.imdbID}`)
+        fetch(`https://www.omdbapi.com/?apikey=3b71935e&i=${this.props.show.imdbID}`)
         .then(resp => resp.json())
         .then(response => {
         
