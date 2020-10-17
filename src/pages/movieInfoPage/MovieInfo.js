@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './movieInfo.css'
 
 
 class MoreInfo extends Component {
@@ -22,19 +22,21 @@ class MoreInfo extends Component {
         
         return(
             <div>
-                <div><img src={this.props.location.state.Poster} alt={this.props.location.state.Title}/></div>
-                <div>
+                <div className='info-row'>
+                <div className='col1'><img src={this.props.location.state.Poster} alt={this.props.location.state.Title}/></div>
+                <div className='col2'>
                     <div>{this.props.location.state.Title} ({this.props.location.state.Released})</div>
-                    <div>Languge: {this.props.location.state.Language}</div>
-                    <div>Languge: {this.props.location.state.Language}</div>
-                    <div>Mpaa rating: {this.state.info.mpaa_rating}</div>
-                    <div>Genre: {this.props.location.state.Genre}</div>
+                    <div><span>Languge:</span> {this.props.location.state.Language}</div>
+                    <div><span>Mpaa rating:</span> {this.state.info.mpaa_rating}</div>
+                    <div><span>Genre:</span>Genre: {this.props.location.state.Genre}</div>
                     <div>Rate: {this.props.location.state.imdbRating} . {this.props.location.state.imdbVotes} vote </div>
                     <div>Runtime: {this.props.location.state.Runtime}</div>
                     <div>Director: {this.props.location.state.Director}</div>
                     <div>Actors: {this.props.location.state.Actors}</div>
 
                 </div>
+                </div>
+                
                 <div>
                     <h2>Summry</h2>
                     <p>{this.state.info.summary_short}</p>

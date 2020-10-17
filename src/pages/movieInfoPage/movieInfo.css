@@ -1,0 +1,24 @@
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col1 img {
+    width: 300px;
+    height: 400px;
+}
+
+.col2 {
+    border: 1px solid #c5c5c5;
+    background-color: #c5c5c5;
+    height: auto;
+    margin-left: 50px;
+}
+
+.col2>div:not(:last-child) {
+    border-bottom:1px solid white;
+   
+}
+.col2 div {
+    padding: 10px;
+}

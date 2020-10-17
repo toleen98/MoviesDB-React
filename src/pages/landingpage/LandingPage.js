@@ -19,6 +19,7 @@ class LandingPage extends Component {
                 <Slider history={history} />
                 <Router>
                     <Tabs/> 
+                    
                     <Switch>
                         <Route path='/' exact component={() => <Shows shows={movies}/>}></Route>
                         <Route path='/series' exact component={() => <Shows shows={series}/>}></Route>
