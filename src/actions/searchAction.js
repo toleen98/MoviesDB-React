@@ -6,7 +6,7 @@ import {
 
 
 export const getSeries =  showName => dispatch => {
-  fetch(`http://www.omdbapi.com/?s=${showName}&apikey=3b71935e&type=series`)
+  fetch(`https://www.omdbapi.com/?s=${showName}&apikey=3b71935e&type=series`)
     .then(resp => resp.json())
     .then(response => {
       console.log(response)
@@ -24,7 +24,7 @@ export const getSeries =  showName => dispatch => {
 };
 
 export const getMovies =  showName => dispatch => {
-  fetch(`http://www.omdbapi.com/?s=${showName}&apikey=3b71935e&type=movie`)
+  fetch(`https://www.omdbapi.com/?s=${showName}&apikey=3b71935e&type=movie`)
     .then(resp => resp.json())
     .then(response => {
       console.log(response)
